@@ -10,4 +10,5 @@
 
 @interface DialView : UIView
 @property(assign) CGPoint currentPoint;
+@property(strong,nonatomic) NSMutableArray *pathArray;
 @end

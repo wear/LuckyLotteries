@@ -12,20 +12,24 @@
 #define DialRadius 300.
 #define pi 3.14159265359
 #define DEGREES_TO_RADIANS(degrees)  ((pi * degrees)/ 180)
-#define PrizeCount 12
+#define PrizeCount 2
 #define ArcAngle 360/PrizeCount
 
 
 @implementation DialView
 @synthesize currentPoint = _currentPoint;
+@synthesize pathArray = _pathArray;
 
+-(NSMutableArray*)pathArray{
+	if(!_pathArray) _pathArray = [[NSMutableArray alloc] init];
+    return _pathArray;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
     }
     return self;
 }
@@ -87,8 +91,8 @@
         }
         CGContextSetStrokeColorWithColor(context, [UIColor brownColor].CGColor);
         [path fillWithBlendMode:kCGBlendModeMultiply alpha:0.2];
+        [self.pathArray addObject:path];
     }
-    
 }
 
 @end

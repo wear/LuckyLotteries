@@ -17,12 +17,17 @@
 @interface PointView()
 @property(strong,nonatomic) DialView* dialView;
 @property(strong,nonatomic) AVAudioPlayer *audioPlayer;
+@property(strong,nonatomic) UIBezierPath *lastPath;
+
+-(void)handleTimer:(NSTimer *)timer;
 @end
 
 @implementation PointView
 @synthesize dialView = _dialView;
 @synthesize rotateValue = _rotateValue;
 @synthesize audioPlayer;
+@synthesize timer = _timer;
+@synthesize lastPath = _lastPath;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,10 +35,9 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
-        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/200922412923771.mp3", [[NSBundle mainBundle] resourcePath]]];
+        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/bibi.mp3", [[NSBundle mainBundle] resourcePath]]];
         NSError *error;
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        self.audioPlayer.numberOfLoops = -1;
         [self.audioPlayer prepareToPlay];
     }
     return self;
@@ -95,7 +99,7 @@
 //    
 //    // Set the value of the spin to 2*pi, this is 1 complete rotation in radians
 	spin.toValue = [NSNumber numberWithDouble:M_PI*self.rotateValue];
-	spin.duration = self.rotateValue/2.5234; // duration to animate a full revolution of 2*Pi radians.
+	spin.duration = self.rotateValue;///2.5234; // duration to animate a full revolution of 2*Pi radians.
     
     self.layer.anchorPoint = CGPointMake(0., 0.5);
     self.layer.position = CGPointMake(dialView.center.x, dialView.center.y - radius/2);
@@ -109,15 +113,35 @@
     self.dialView.currentPoint = CGPointZero;
     [self.dialView setNeedsDisplay];
     // 播放音频
-    [self.audioPlayer play];
+    if(![self.timer isValid]){
+        self.timer = [NSTimer scheduledTimerWithTimeInterval: 0.05234
+                                                 target: self
+                                               selector: @selector(handleTimer:)
+                                               userInfo: nil
+                                                     repeats: YES];
+    }
 }
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {   
     self.dialView.currentPoint = [self.dialView.layer convertPoint:CGPointMake(200.,radius/2) fromLayer:self.layer];
-    [self.audioPlayer stop];
+    [self.audioPlayer play];
     [self.dialView setNeedsDisplay];
-    
+    [self.timer invalidate];
+}
+
+-(void)handleTimer:(NSTimer *)timer{
+    CGPoint currentPoint = [self.dialView.layer  convertPoint:CGPointMake(200.,radius/2) fromLayer:[self.layer presentationLayer]]; 
+    for(UIBezierPath *path in self.dialView.pathArray){
+		if([path containsPoint:currentPoint]){
+         	if(!self.lastPath || !CGPointEqualToPoint([path bounds].origin,[self.lastPath bounds].origin)){
+                NSLog(@"sound played");
+                [self.audioPlayer play];
+                self.lastPath = path;
+            } 
+            break;
+        }
+    }
 }
 
 

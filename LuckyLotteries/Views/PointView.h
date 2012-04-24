@@ -10,6 +10,6 @@
 
 @interface PointView : UIView
 @property(assign) CGFloat rotateValue;
-
+@property(strong) NSTimer *timer;
 - (void)animateRotateInDiaView:(UIView*)dialView;
 @end
