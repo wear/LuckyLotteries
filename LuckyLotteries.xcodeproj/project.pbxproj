@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8A46284153D656B0066420D /* UIColor+RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A46283153D656B0066420D /* UIColor+RGBColor.m */; };
+		D8BCC1A91541027F008C0F92 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCC1A81541027F008C0F92 /* AVFoundation.framework */; };
+		D8BCC1AC1541028D008C0F92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCC1AB1541028D008C0F92 /* AudioToolbox.framework */; };
+		D8BCC1AF15410EE8008C0F92 /* 200922412923771.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8BCC1AE15410EE8008C0F92 /* 200922412923771.mp3 */; };
+		D8C942BC1539204E001CD4F6 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C942BB1539204E001CD4F6 /* PointView.m */; };
+		D8C942C315392465001CD4F6 /* InnerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C942C215392465001CD4F6 /* InnerCircle.m */; };
+		D8C942C915397B45001CD4F6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C942C815397B45001CD4F6 /* QuartzCore.framework */; };
 		D8DFE3F41537040400942561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DFE3F31537040400942561 /* UIKit.framework */; };
 		D8DFE3F61537040400942561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DFE3F51537040400942561 /* Foundation.framework */; };
 		D8DFE3F81537040400942561 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DFE3F71537040400942561 /* CoreGraphics.framework */; };
@@ -15,22 +22,35 @@
 		D8DFE4041537040400942561 /* LuckyLotteriesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFE4031537040400942561 /* LuckyLotteriesAppDelegate.m */; };
 		D8DFE4071537040400942561 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DFE4051537040400942561 /* MainStoryboard.storyboard */; };
 		D8DFE40A1537040400942561 /* LuckyLotteriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFE4091537040400942561 /* LuckyLotteriesViewController.m */; };
+		D8DFE4121537076A00942561 /* DialView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DFE4111537076A00942561 /* DialView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8A46282153D656B0066420D /* UIColor+RGBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+RGBColor.h"; path = "helpers/UIColor+RGBColor.h"; sourceTree = "<group>"; };
+		D8A46283153D656B0066420D /* UIColor+RGBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RGBColor.m"; path = "helpers/UIColor+RGBColor.m"; sourceTree = "<group>"; };
+		D8BCC1A81541027F008C0F92 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D8BCC1AB1541028D008C0F92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D8BCC1AE15410EE8008C0F92 /* 200922412923771.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 200922412923771.mp3; sourceTree = "<group>"; };
+		D8C942BA1539204E001CD4F6 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointView.h; path = Views/PointView.h; sourceTree = "<group>"; };
+		D8C942BB1539204E001CD4F6 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointView.m; path = Views/PointView.m; sourceTree = "<group>"; };
+		D8C942C115392465001CD4F6 /* InnerCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InnerCircle.h; path = Views/InnerCircle.h; sourceTree = "<group>"; };
+		D8C942C215392465001CD4F6 /* InnerCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InnerCircle.m; path = Views/InnerCircle.m; sourceTree = "<group>"; };
+		D8C942C815397B45001CD4F6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D8DFE3EF1537040300942561 /* LuckyLotteries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyLotteries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DFE3F31537040400942561 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D8DFE3F51537040400942561 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8DFE3F71537040400942561 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D8DFE3FB1537040400942561 /* LuckyLotteries-Info.plist */ = {isa = PBXFileReference; path = "LuckyLotteries-Info.plist"; sourceTree = "<group>"; };
+		D8DFE3FB1537040400942561 /* LuckyLotteries-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LuckyLotteries-Info.plist"; sourceTree = "<group>"; };
 		D8DFE3FD1537040400942561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8DFE3FF1537040400942561 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D8DFE4011537040400942561 /* LuckyLotteries-Prefix.pch */ = {isa = PBXFileReference; path = "LuckyLotteries-Prefix.pch"; sourceTree = "<group>"; };
-		D8DFE4021537040400942561 /* LuckyLotteriesAppDelegate.h */ = {isa = PBXFileReference; path = LuckyLotteriesAppDelegate.h; sourceTree = "<group>"; };
+		D8DFE4011537040400942561 /* LuckyLotteries-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuckyLotteries-Prefix.pch"; sourceTree = "<group>"; };
+		D8DFE4021537040400942561 /* LuckyLotteriesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuckyLotteriesAppDelegate.h; sourceTree = "<group>"; };
 		D8DFE4031537040400942561 /* LuckyLotteriesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuckyLotteriesAppDelegate.m; sourceTree = "<group>"; };
 		D8DFE4061537040400942561 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D8DFE4081537040400942561 /* LuckyLotteriesViewController.h */ = {isa = PBXFileReference; path = LuckyLotteriesViewController.h; sourceTree = "<group>"; };
+		D8DFE4081537040400942561 /* LuckyLotteriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuckyLotteriesViewController.h; sourceTree = "<group>"; };
 		D8DFE4091537040400942561 /* LuckyLotteriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuckyLotteriesViewController.m; sourceTree = "<group>"; };
+		D8DFE4101537076A00942561 /* DialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialView.h; path = Views/DialView.h; sourceTree = "<group>"; };
+		D8DFE4111537076A00942561 /* DialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialView.m; path = Views/DialView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BCC1AC1541028D008C0F92 /* AudioToolbox.framework in Frameworks */,
+				D8BCC1A91541027F008C0F92 /* AVFoundation.framework in Frameworks */,
+				D8C942C915397B45001CD4F6 /* QuartzCore.framework in Frameworks */,
 				D8DFE3F41537040400942561 /* UIKit.framework in Frameworks */,
 				D8DFE3F61537040400942561 /* Foundation.framework in Frameworks */,
 				D8DFE3F81537040400942561 /* CoreGraphics.framework in Frameworks */,
@@ -47,6 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8A4627D153D65020066420D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D8A46282153D656B0066420D /* UIColor+RGBColor.h */,
+				D8A46283153D656B0066420D /* UIColor+RGBColor.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		D8BCC1AD15410EC4008C0F92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8BCC1AE15410EE8008C0F92 /* 200922412923771.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D8DFE3E41537040200942561 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +107,9 @@
 		D8DFE3F21537040300942561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8BCC1AB1541028D008C0F92 /* AudioToolbox.framework */,
+				D8BCC1A81541027F008C0F92 /* AVFoundation.framework */,
+				D8C942C815397B45001CD4F6 /* QuartzCore.framework */,
 				D8DFE3F31537040400942561 /* UIKit.framework */,
 				D8DFE3F51537040400942561 /* Foundation.framework */,
 				D8DFE3F71537040400942561 /* CoreGraphics.framework */,
@@ -77,8 +120,9 @@
 		D8DFE3F91537040400942561 /* LuckyLotteries */ = {
 			isa = PBXGroup;
 			children = (
-				D8DFE4021537040400942561 /* LuckyLotteriesAppDelegate.h */,
-				D8DFE4031537040400942561 /* LuckyLotteriesAppDelegate.m */,
+				D8BCC1AD15410EC4008C0F92 /* Resources */,
+				D8A4627D153D65020066420D /* Helper */,
+				D8DFE4131537077700942561 /* views */,
 				D8DFE4051537040400942561 /* MainStoryboard.storyboard */,
 				D8DFE4081537040400942561 /* LuckyLotteriesViewController.h */,
 				D8DFE4091537040400942561 /* LuckyLotteriesViewController.m */,
@@ -90,12 +134,27 @@
 		D8DFE3FA1537040400942561 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8DFE4021537040400942561 /* LuckyLotteriesAppDelegate.h */,
+				D8DFE4031537040400942561 /* LuckyLotteriesAppDelegate.m */,
 				D8DFE3FB1537040400942561 /* LuckyLotteries-Info.plist */,
 				D8DFE3FC1537040400942561 /* InfoPlist.strings */,
 				D8DFE3FF1537040400942561 /* main.m */,
 				D8DFE4011537040400942561 /* LuckyLotteries-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8DFE4131537077700942561 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D8DFE4101537076A00942561 /* DialView.h */,
+				D8DFE4111537076A00942561 /* DialView.m */,
+				D8C942BA1539204E001CD4F6 /* PointView.h */,
+				D8C942BB1539204E001CD4F6 /* PointView.m */,
+				D8C942C115392465001CD4F6 /* InnerCircle.h */,
+				D8C942C215392465001CD4F6 /* InnerCircle.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +210,7 @@
 			files = (
 				D8DFE3FE1537040400942561 /* InfoPlist.strings in Resources */,
 				D8DFE4071537040400942561 /* MainStoryboard.storyboard in Resources */,
+				D8BCC1AF15410EE8008C0F92 /* 200922412923771.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +224,10 @@
 				D8DFE4001537040400942561 /* main.m in Sources */,
 				D8DFE4041537040400942561 /* LuckyLotteriesAppDelegate.m in Sources */,
 				D8DFE40A1537040400942561 /* LuckyLotteriesViewController.m in Sources */,
+				D8DFE4121537076A00942561 /* DialView.m in Sources */,
+				D8C942BC1539204E001CD4F6 /* PointView.m in Sources */,
+				D8C942C315392465001CD4F6 /* InnerCircle.m in Sources */,
+				D8A46284153D656B0066420D /* UIColor+RGBColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +304,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LuckyLotteries/LuckyLotteries-Prefix.pch";
 				INFOPLIST_FILE = "LuckyLotteries/LuckyLotteries-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -251,7 +317,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LuckyLotteries/LuckyLotteries-Prefix.pch";
 				INFOPLIST_FILE = "LuckyLotteries/LuckyLotteries-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -275,6 +343,7 @@
 				D8DFE40F1537040400942561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
