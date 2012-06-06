@@ -17,12 +17,15 @@
 @interface PointView()
 @property(strong,nonatomic) DialView* dialView;
 @property(strong,nonatomic) AVAudioPlayer *audioPlayer;
+@property(strong,nonatomic) UIBezierPath *lastPath;
 @end
 
 @implementation PointView
 @synthesize dialView = _dialView;
 @synthesize rotateValue = _rotateValue;
 @synthesize audioPlayer;
+@synthesize timer = _timer;
+@synthesize lastPath = _lastPath;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,11 +33,6 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
-        NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/200922412923771.mp3", [[NSBundle mainBundle] resourcePath]]];
-        NSError *error;
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        self.audioPlayer.numberOfLoops = -1;
-        [self.audioPlayer prepareToPlay];
     }
     return self;
 }
@@ -103,22 +101,19 @@
     // 隐式动画
     [self setTransform:CGAffineTransformMakeRotation(M_PI*self.rotateValue)];
     [self.layer addAnimation:spin forKey:@"transform"];
+    [self.dialView setNeedsDisplay];
 }
 
 - (void)animationDidStart:(CAAnimation *)theAnimation{
-    self.dialView.currentPoint = CGPointZero;
-    [self.dialView setNeedsDisplay];
-    // 播放音频
-    [self.audioPlayer play];
+    self.dialView.currentPoint = CGPointZero;    
 }
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {   
     self.dialView.currentPoint = [self.dialView.layer convertPoint:CGPointMake(200.,radius/2) fromLayer:self.layer];
-    [self.audioPlayer stop];
     [self.dialView setNeedsDisplay];
-    
 }
+
 
 
 @end

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8735B1B1546F71D009E39E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCC1AB1541028D008C0F92 /* AudioToolbox.framework */; };
+		D8735B1C1546F723009E39E9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCC1A81541027F008C0F92 /* AVFoundation.framework */; };
 		D8A46284153D656B0066420D /* UIColor+RGBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A46283153D656B0066420D /* UIColor+RGBColor.m */; };
-		D8BCC1A91541027F008C0F92 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCC1A81541027F008C0F92 /* AVFoundation.framework */; };
-		D8BCC1AC1541028D008C0F92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BCC1AB1541028D008C0F92 /* AudioToolbox.framework */; };
-		D8BCC1AF15410EE8008C0F92 /* 200922412923771.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8BCC1AE15410EE8008C0F92 /* 200922412923771.mp3 */; };
 		D8C942BC1539204E001CD4F6 /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C942BB1539204E001CD4F6 /* PointView.m */; };
 		D8C942C315392465001CD4F6 /* InnerCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C942C215392465001CD4F6 /* InnerCircle.m */; };
 		D8C942C915397B45001CD4F6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C942C815397B45001CD4F6 /* QuartzCore.framework */; };
@@ -30,7 +29,6 @@
 		D8A46283153D656B0066420D /* UIColor+RGBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RGBColor.m"; path = "helpers/UIColor+RGBColor.m"; sourceTree = "<group>"; };
 		D8BCC1A81541027F008C0F92 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D8BCC1AB1541028D008C0F92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		D8BCC1AE15410EE8008C0F92 /* 200922412923771.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 200922412923771.mp3; sourceTree = "<group>"; };
 		D8C942BA1539204E001CD4F6 /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointView.h; path = Views/PointView.h; sourceTree = "<group>"; };
 		D8C942BB1539204E001CD4F6 /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointView.m; path = Views/PointView.m; sourceTree = "<group>"; };
 		D8C942C115392465001CD4F6 /* InnerCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InnerCircle.h; path = Views/InnerCircle.h; sourceTree = "<group>"; };
@@ -58,8 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8BCC1AC1541028D008C0F92 /* AudioToolbox.framework in Frameworks */,
-				D8BCC1A91541027F008C0F92 /* AVFoundation.framework in Frameworks */,
+				D8735B1C1546F723009E39E9 /* AVFoundation.framework in Frameworks */,
+				D8735B1B1546F71D009E39E9 /* AudioToolbox.framework in Frameworks */,
 				D8C942C915397B45001CD4F6 /* QuartzCore.framework in Frameworks */,
 				D8DFE3F41537040400942561 /* UIKit.framework in Frameworks */,
 				D8DFE3F61537040400942561 /* Foundation.framework in Frameworks */,
@@ -82,7 +80,6 @@
 		D8BCC1AD15410EC4008C0F92 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D8BCC1AE15410EE8008C0F92 /* 200922412923771.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -210,7 +207,6 @@
 			files = (
 				D8DFE3FE1537040400942561 /* InfoPlist.strings in Resources */,
 				D8DFE4071537040400942561 /* MainStoryboard.storyboard in Resources */,
-				D8BCC1AF15410EE8008C0F92 /* 200922412923771.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
